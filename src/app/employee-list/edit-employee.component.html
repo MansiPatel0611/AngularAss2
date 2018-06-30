@@ -1,0 +1,40 @@
+
+<form  #form ="ngForm" (ngSubmit)="onSubmit(form.value)" style="margin-left:40px">
+  <h3>Employee Data Edit Form</h3>
+  
+  First name:
+  <input type="text" style="position:absolute;left:200px" name="firstname" readonly="readonly" [(ngModel)]="data.firstname"><br><br>
+
+  Last name:
+  <input type="text" style="position:absolute;left:200px" name="lastname" [(ngModel)]="data.lastname"><br><br>
+ 
+  Email:
+  <input type="text" style="position:absolute;left:200px" name="eid" [(ngModel)]="data.email"><br><br>
+
+  Address:
+  <textarea style="position:absolute;left:200px" name="address" [(ngModel)]="data.address"></textarea><br><br><br>
+
+  User Name:
+  <input style="position:absolute;left:200px" type="text" name="uname" [(ngModel)]="data.username"><br><br>
+  
+  Password:
+  <input type="text" style="position:absolute;left:200px" name="pass" [(ngModel)]="data.password"><br><br>
+  
+  Gender:
+  <input type="text" style="position:absolute;left:200px" name="gender" [(ngModel)]="data.gender"><br><br>
+    
+  Qualification:
+  <input type="text" name="qualification" style="position:absolute;left:200px" [(ngModel)]="data.qualification"><br><br>
+    
+  Experience:
+  <input type="text" name="experience" style="position:absolute;left:200px" [(ngModel)]="data.experience"><br><br>
+
+  Coding Languages:
+  <textarea name="langKnown" [(ngModel)]="data.langKnown" style="position:absolute;left:200px"></textarea><br><br><br><br>
+  
+    
+  <input type="submit" style="margin-left:50px;font-size:16px">
+  <button (click)="on_cancel()" style="margin-left:20px;font-size:16px">Cancel</button>
+   </form>
+
+    

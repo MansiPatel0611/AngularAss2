@@ -1,0 +1,47 @@
+
+<form  #form ="ngForm" (ngSubmit)="onSubmit(form.value)" style="margin-left:40px">
+  <h3>Employee Data Form</h3>
+  
+  <label> First name:</label><br>
+    <input type="text" class="form-control" name="firstname" [(ngModel)]="model.firstname"><br>
+    <label> Last name:</label><br>
+    <input type="text" class="form-control" name="lastname" [(ngModel)]="model.lastname"><br>
+ 
+    <label> Email:</label><br>
+    <input type="text" name="eid" [(ngModel)]="model.email"><br>
+    <label> Address:</label><br>
+    <textarea name="address" [(ngModel)]="model.address"></textarea><br>
+    <label> User Name:</label><br>
+    <input type="text" name="uname" [(ngModel)]="model.username"><br>
+    <label> Password:</label><br>
+    <input type="password" name="pass" [(ngModel)]="model.password"><br>
+    <label> Gender:</label><br>
+    <input type="radio" name="rgender" [(ngModel)]="model.gender" value="Male" >Male
+    <input type="radio" name="rgender" [(ngModel)]="model.gender" value="Female">Female<br><br>
+  <label> Qualification:</label><br>
+    <select [(ngModel)]="model.qualification" name="qualification">
+      <option *ngFor="let quali of qualification">
+        {{ quali }}
+      </option>
+    </select>
+    <br><br>
+    <label> Experience:</label><br>
+    <select [(ngModel)]="model.experience" name="experience">
+      <option *ngFor="let exp of experience">
+        {{ exp }}
+      </option>
+    </select><br><br>
+    <label> Coding Languages:</label><br>
+   
+  
+  
+    <label *ngFor="let lang of languages" >
+    <input type="checkbox" id="{{ lang }}" name="known" (change)="toggleEditable($event)"> {{ lang }} <br>
+  
+   
+    </label>
+     
+  <input type="submit">
+   </form>
+
+    
